@@ -422,7 +422,7 @@ function Contact() {
     setIsSubmitting(true)
     
     try {
-      await fetch('https://planejamentocomercialtvx.app.n8n.cloud/webhook/ts', {
+      await fetch('https://n8n.timesavingtech.com.br/webhook/ts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

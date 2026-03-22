@@ -334,6 +334,30 @@ function Clients() {
       name: 'BBL Advogados',
       logo: '/clientes/bbl-logo.jpeg',
     },
+    {
+      name: 'Ronron Cat Café',
+      logo: '/clientes/ronron-logo.png',
+    },
+    {
+      name: 'Training Academia',
+      logo: '/clientes/training-logo.png',
+    },
+    {
+      name: 'Fornecedora Agnus',
+      logo: '/clientes/agnus-logo.png',
+    },
+    {
+      name: 'Cozinha da Cler',
+      logo: '/clientes/marmitas-cler-logo.jpeg',
+    },
+    {
+      name: 'Simetrik',
+      logo: '/clientes/simetrik-logo.png',
+    },
+    {
+      name: 'Residencial Imperatriz',
+      logo: '/clientes/residencial-imperatriz-logo.png',
+    },
   ]
 
   return (
@@ -356,7 +380,7 @@ function Clients() {
 
         {/* Clients grid */}
         <div className="flex flex-wrap justify-center gap-8">
-          {clients.map((client, index) => (
+          {clients.map((client) => (
             <div
               key={client.name}
               className="card-hover bg-[#12121a] border border-[#1e1e2e] rounded-2xl p-8 min-w-[280px] flex items-center justify-center"

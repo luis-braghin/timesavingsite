@@ -22,6 +22,12 @@ import {
   Smartphone,
   Mic
 } from 'lucide-react'
+import HowItWorks from './components/HowItWorks'
+import TechStack from './components/TechStack'
+import FAQ from './components/FAQ'
+import ExitIntentPopup from './components/ExitIntentPopup'
+import WhatsAppWidget from './components/WhatsAppWidget'
+import CalendlyButton from './components/CalendlyButton'
 
 // Navigation Component
 function Navigation() {
@@ -39,8 +45,9 @@ function Navigation() {
   const navLinks = [
     { href: '#inicio', label: 'Início' },
     { href: '#servicos', label: 'Serviços' },
-    { href: '#parceiros', label: 'Parceiros' },
+    { href: '#como-funciona', label: 'Como funciona' },
     { href: '#cases', label: 'Cases' },
+    { href: '#faq', label: 'FAQ' },
     { href: '#contato', label: 'Contato' },
   ]
 
@@ -865,6 +872,8 @@ function Contact() {
                 </li>
               </ul>
             </div>
+
+            <CalendlyButton />
           </div>
         </div>
       </div>
@@ -890,7 +899,9 @@ function Footer() {
           <div className="flex items-center gap-6">
             <a href="#inicio" className="text-[#8b8b9e] hover:text-white text-sm transition-colors">Início</a>
             <a href="#servicos" className="text-[#8b8b9e] hover:text-white text-sm transition-colors">Serviços</a>
-            <a href="#parceiros" className="text-[#8b8b9e] hover:text-white text-sm transition-colors">Parceiros</a>
+            <a href="#como-funciona" className="text-[#8b8b9e] hover:text-white text-sm transition-colors">Como funciona</a>
+            <a href="#cases" className="text-[#8b8b9e] hover:text-white text-sm transition-colors">Cases</a>
+            <a href="#faq" className="text-[#8b8b9e] hover:text-white text-sm transition-colors">FAQ</a>
             <a href="#contato" className="text-[#8b8b9e] hover:text-white text-sm transition-colors">Contato</a>
           </div>
         </div>
@@ -907,11 +918,16 @@ export default function App() {
       <Hero />
       <About />
       <Services />
+      <HowItWorks />
+      <TechStack />
       <Partners />
       <Clients />
       <CaseStudies />
+      <FAQ />
       <Contact />
       <Footer />
+      <WhatsAppWidget />
+      <ExitIntentPopup />
     </div>
   )
 }

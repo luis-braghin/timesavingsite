@@ -16,14 +16,14 @@ export default function ExitIntentPopup() {
       if (window.innerWidth <= 768) return
 
       // Only show once per session
-      if (localStorage.getItem('ts_exit_shown')) return
+      if (localStorage.getItem('tst_exit_shown')) return
 
-      // Don't show in the first 30 seconds
+      // Don't monitor until at least 20 seconds after page load
       const elapsed = Date.now() - mountTimeRef.current
-      if (elapsed < 30000) return
+      if (elapsed < 20000) return
 
       setShowPopup(true)
-      localStorage.setItem('ts_exit_shown', 'true')
+      localStorage.setItem('tst_exit_shown', 'true')
     }
 
     document.documentElement.addEventListener('mouseleave', handleMouseLeave)

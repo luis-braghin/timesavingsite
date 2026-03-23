@@ -101,17 +101,17 @@ PROCESSES = [
     {
         'num': '01',
         'icon': '>>>',
-        'title': 'Notificacoes automaticas de entrega e atendimento',
+        'title': 'Notificações automáticas de entrega e atendimento',
         'problem': (
             'Clientes fazem pedidos, entregas chegam, tickets abrem — e ficam '
-            'esperando ate alguem ver. Num dia movimentado, isso vira fila de '
-            'mensagens sem resposta e cliente insatisfeito. A equipe so descobre '
-            'o problema quando o cliente ja reclamou.'
+            'esperando até alguém ver. Num dia movimentado, isso vira fila de '
+            'mensagens sem resposta e cliente insatisfeito. A equipe só descobre '
+            'o problema quando o cliente já reclamou.'
         ),
         'solution': (
-            'Qualquer evento relevante dispara uma notificacao automatica para quem '
-            'precisa saber — cliente, morador, gestor. Sem depender de alguem '
-            'lembrando de avisar. O sistema cuida da comunicacao enquanto sua equipe '
+            'Qualquer evento relevante dispara uma notificação automática para quem '
+            'precisa saber — cliente, morador, gestor. Sem depender de alguém '
+            'lembrando de avisar. O sistema cuida da comunicação enquanto sua equipe '
             'foca no que importa.'
         ),
         'tools': ['n8n', 'WhatsApp API'],
@@ -119,29 +119,29 @@ PROCESSES = [
         'case_real': (
             'Port-Go no Residencial Imperatriz em SP. Antes o porteiro anotava a '
             'entrega num caderno e ligava para o morador. Hoje registra no app e '
-            'o morador recebe WhatsApp automatico em segundos.'
+            'o morador recebe WhatsApp automático em segundos.'
         ),
     },
     {
         'num': '02',
         'icon': '[+]',
-        'title': 'Agendamento e gestao de eventos e reservas',
+        'title': 'Agendamento e gestão de eventos e reservas',
         'problem': (
-            'Formulario generico do Google, PIX manual, comprovante por WhatsApp, '
-            'anotacao em planilha. Cada inscricao gera pelo menos 4 interacoes '
+            'Formulário genérico do Google, PIX manual, comprovante por WhatsApp, '
+            'anotação em planilha. Cada inscrição gera pelo menos 4 interações '
             'manuais — e qualquer erro no meio gera retrabalho. A equipe perde '
-            'horas toda semana gerenciando o que deveria ser automatico.'
+            'horas toda semana gerenciando o que deveria ser automático.'
         ),
         'solution': (
-            'O cliente ve as vagas disponiveis, escolhe, paga e recebe confirmacao '
-            '— tudo no mesmo lugar. O numero de vagas atualiza em tempo real. '
-            'Ninguem precisa controlar nada manualmente.'
+            'O cliente vê as vagas disponíveis, escolhe, paga e recebe confirmação '
+            '— tudo no mesmo lugar. O número de vagas atualiza em tempo real. '
+            'Ninguém precisa controlar nada manualmente.'
         ),
         'tools': ['React', 'Google Sheets API', 'n8n'],
         'savings': '3-5h/semana operacional',
         'case_real': (
-            'Ronron Cat Cafe em Vila Leopoldina, SP. A dona do cafe nao e de '
-            'tecnologia. Em vez de um painel admin complexo, a solucao usa Google '
+            'Ronron Cat Café em Vila Leopoldina, SP. A dona do café não é de '
+            'tecnologia. Em vez de um painel admin complexo, a solução usa Google '
             'Sheets como CMS — ela preenche uma linha na planilha e o site atualiza '
             'sozinho.'
         ),
@@ -149,10 +149,10 @@ PROCESSES = [
     {
         'num': '03',
         'icon': '(i)',
-        'title': 'Registro e analise alimentar com IA',
+        'title': 'Registro e análise alimentar com IA',
         'problem': (
-            'Contar calorias e eficaz mas chato. Abrir o app, buscar o alimento, '
-            'ajustar a porcao, repetir 4x por dia. A maioria desiste em menos de '
+            'Contar calorias é eficaz mas chato. Abrir o app, buscar o alimento, '
+            'ajustar a porção, repetir 4x por dia. A maioria desiste em menos de '
             'uma semana — e o nutricionista fica sem dados reais do paciente.'
         ),
         'solution': (
@@ -162,9 +162,9 @@ PROCESSES = [
             'de anotar.'
         ),
         'tools': ['Claude AI', 'Whisper', 'n8n', 'Supabase'],
-        'savings': '15min/refeicao por paciente',
+        'savings': '15min/refeição por paciente',
         'case_real': (
-            'FalaFit — plataforma com PWA instalavel, sistema completo para '
+            'FalaFit — plataforma com PWA instalável, sistema completo para '
             'nutricionistas e registro por voz com Claude AI + Whisper. '
             'Desenvolvido do zero pela Time Saving Tech.'
         ),
@@ -172,18 +172,18 @@ PROCESSES = [
     {
         'num': '04',
         'icon': '</>',
-        'title': 'Prospeccao e pesquisa de leads B2B',
+        'title': 'Prospecção e pesquisa de leads B2B',
         'problem': (
             'Seu time comercial passa horas pesquisando empresas no Google, '
             'LinkedIn e CNPJ, tentando entender o perfil antes de ligar. Para '
-            'cada lead qualificado, sao 30-60 minutos de pesquisa manual. Tempo '
+            'cada lead qualificado, são 30-60 minutos de pesquisa manual. Tempo '
             'que poderia ser gasto vendendo.'
         ),
         'solution': (
-            'Um agente de IA pesquisa a empresa, identifica dores provaveis, '
-            'sugere o servico mais adequado e escreve um email personalizado — tudo '
-            'automaticamente. O time comercial so executa a abordagem, com contexto '
-            'completo em maos.'
+            'Um agente de IA pesquisa a empresa, identifica dores prováveis, '
+            'sugere o serviço mais adequado e escreve um email personalizado — tudo '
+            'automaticamente. O time comercial só executa a abordagem, com contexto '
+            'completo em mãos.'
         ),
         'tools': ['Claude AI', 'n8n', 'Web Search'],
         'savings': '4-8h/semana do time comercial',
@@ -194,15 +194,15 @@ PROCESSES = [
         'icon': '[*]',
         'title': 'Onboarding de clientes',
         'problem': (
-            'Cliente assinou o contrato. Agora comeca o manual: enviar boas-vindas, '
+            'Cliente assinou o contrato. Agora começa o manual: enviar boas-vindas, '
             'solicitar documentos, criar acessos, agendar kickoff, mandar lembretes. '
-            'Sao 1-2 horas de trabalho repetitivo para cada novo cliente — e se '
-            'esquecer de alguma etapa, a experiencia do cliente ja comeca mal.'
+            'São 1-2 horas de trabalho repetitivo para cada novo cliente — e se '
+            'esquecer de alguma etapa, a experiência do cliente já começa mal.'
         ),
         'solution': (
-            'Um fluxo automatizado cuida de tudo assim que o contrato e assinado — '
-            'email de boas-vindas, link para envio de documentos, criacao de acessos '
-            'e agendamento do kickoff. Voce so aparece na reuniao.'
+            'Um fluxo automatizado cuida de tudo assim que o contrato é assinado — '
+            'email de boas-vindas, link para envio de documentos, criação de acessos '
+            'e agendamento do kickoff. Você só aparece na reunião.'
         ),
         'tools': ['n8n', 'Google Drive', 'WhatsApp API'],
         'savings': '1-2h por novo cliente',
@@ -211,17 +211,17 @@ PROCESSES = [
     {
         'num': '06',
         'icon': '[=]',
-        'title': 'Relatorios e dashboards automaticos',
+        'title': 'Relatórios e dashboards automáticos',
         'problem': (
-            'Toda semana alguem para o que esta fazendo para montar o relatorio '
+            'Toda semana alguém para o que está fazendo para montar o relatório '
             'do gestor. Puxa dados de um sistema, cola no Excel, formata, envia. '
-            '3 horas depois o relatorio ja esta desatualizado e o processo '
-            'recomeca na semana seguinte.'
+            '3 horas depois o relatório já está desatualizado e o processo '
+            'recomeça na semana seguinte.'
         ),
         'solution': (
-            'Dashboard atualizado em tempo real acessivel a qualquer hora. '
-            'Relatorio semanal gerado e enviado automaticamente toda sexta-feira. '
-            'Ninguem precisa fazer nada — os dados chegam para quem precisa, '
+            'Dashboard atualizado em tempo real acessível a qualquer hora. '
+            'Relatório semanal gerado e enviado automaticamente toda sexta-feira. '
+            'Ninguém precisa fazer nada — os dados chegam para quem precisa, '
             'quando precisam.'
         ),
         'tools': ['Power BI', 'SQL Server', 'Power Automate'],
@@ -233,15 +233,15 @@ PROCESSES = [
         'icon': '[@]',
         'title': 'Triagem e resposta de emails',
         'problem': (
-            'Caixa de entrada com 200+ emails. Metade e newsletter, um quarto e '
-            'copia desnecessaria, e os emails importantes ficam enterrados no meio. '
+            'Caixa de entrada com 200+ emails. Metade é newsletter, um quarto é '
+            'cópia desnecessária, e os emails importantes ficam enterrados no meio. '
             'Triagem manual consome 1-2 horas por dia que poderiam ser usadas em '
             'trabalho real.'
         ),
         'solution': (
-            'Agente de IA le, classifica e prioriza os emails automaticamente. '
-            'Respostas padrao para solicitacoes comuns sao sugeridas (ou enviadas '
-            'automaticamente). Voce so ve o que realmente precisa da sua atencao.'
+            'Agente de IA lê, classifica e prioriza os emails automaticamente. '
+            'Respostas padrão para solicitações comuns são sugeridas (ou enviadas '
+            'automaticamente). Você só vê o que realmente precisa da sua atenção.'
         ),
         'tools': ['Claude AI', 'n8n', 'Gmail API'],
         'savings': '1-2h/dia',
@@ -252,57 +252,57 @@ PROCESSES = [
         'icon': '{?}',
         'title': 'Base de conhecimento com IA (RAG)',
         'problem': (
-            'A resposta para a pergunta do cliente esta em algum lugar — num PDF '
-            'de 80 paginas, num email antigo ou numa ata de reuniao de 6 meses '
-            'atras. Encontrar leva 20 minutos. Multiplicado por toda a equipe, '
-            'isso e horas perdidas todo dia.'
+            'A resposta para a pergunta do cliente está em algum lugar — num PDF '
+            'de 80 páginas, num email antigo ou numa ata de reunião de 6 meses '
+            'atrás. Encontrar leva 20 minutos. Multiplicado por toda a equipe, '
+            'isso é horas perdidas todo dia.'
         ),
         'solution': (
             'Um chatbot interno consultado em linguagem natural responde '
             'instantaneamente consultando toda a base documental da empresa — '
-            'manuais, contratos, politicas, atas. Em segundos, nao em minutos.'
+            'manuais, contratos, políticas, atas. Em segundos, não em minutos.'
         ),
         'tools': ['Claude AI', 'Supabase Vector', 'n8n'],
         'savings': '20-40min/dia por colaborador',
         'case_real': (
             'BBL Advogados — compliance assistant interno que consulta toda a '
-            'base de legislacao e documentos internos do escritorio em tempo '
-            'real, respondendo perguntas juridicas em segundos.'
+            'base de legislação e documentos internos do escritório em tempo '
+            'real, respondendo perguntas jurídicas em segundos.'
         ),
     },
     {
         'num': '09',
         'icon': '[#]',
-        'title': 'Gestao de contratos e documentos juridicos',
+        'title': 'Gestão de contratos e documentos jurídicos',
         'problem': (
-            'Contratos criados copiando e colando de versoes anteriores, revisao '
-            'manual linha por linha, vencimentos anotados em planilha que ninguem '
+            'Contratos criados copiando e colando de versões anteriores, revisão '
+            'manual linha por linha, vencimentos anotados em planilha que ninguém '
             'atualiza. Um contrato esquecido pode custar caro — tanto em dinheiro '
-            'quanto em relacao comercial.'
+            'quanto em relação comercial.'
         ),
         'solution': (
             'Templates inteligentes geram contratos automaticamente a partir de '
-            'dados do cliente. Alertas automaticos avisam sobre vencimentos com '
-            'antecedencia. Nada cai no esquecimento.'
+            'dados do cliente. Alertas automáticos avisam sobre vencimentos com '
+            'antecedência. Nada cai no esquecimento.'
         ),
         'tools': ['n8n', 'Google Docs API', 'Claude AI'],
-        'savings': '2-4h/semana juridico',
+        'savings': '2-4h/semana jurídico',
         'case_real': None,
     },
     {
         'num': '10',
         'icon': '<~>',
-        'title': 'Integracao entre sistemas legados',
+        'title': 'Integração entre sistemas legados',
         'problem': (
-            'O pedido entra no e-commerce, alguem copia para o ERP, depois '
-            'atualiza a planilha de estoque, depois lanca no financeiro. Quatro '
+            'O pedido entra no e-commerce, alguém copia para o ERP, depois '
+            'atualiza a planilha de estoque, depois lança no financeiro. Quatro '
             'sistemas, quatro entradas manuais, quatro chances de erro — para '
             'cada pedido.'
         ),
         'solution': (
             'Os sistemas conversam automaticamente. Um dado inserido num lugar '
-            'propaga para todos os outros em tempo real, sem intervencao humana. '
-            'Fim do retrabalho, fim dos erros de digitacao.'
+            'propaga para todos os outros em tempo real, sem intervenção humana. '
+            'Fim do retrabalho, fim dos erros de digitação.'
         ),
         'tools': ['n8n', 'APIs REST', 'Webhooks'],
         'savings': 'Elimina retrabalho de entrada manual de dados',
@@ -446,7 +446,7 @@ def draw_page_number(c, page_num, total):
 
 
 def draw_section_label(c, x, y, text, color=None):
-    """Draw a section label like '// Introducao' in mono style."""
+    """Draw a section label like '// Introdução' in mono style."""
     if color is None:
         color = COLORS['cyan']
     draw_text(c, x, y, text, font=FONT_MONO, size=10, color=color)
@@ -552,7 +552,7 @@ def build_cover(c):
 
     # Subtitle
     draw_text_centered(c, PAGE_W / 2, title_y - 60,
-                       "Um guia pratico da Time Saving Tech",
+                       "Um guia prático da Time Saving Tech",
                        size=14, color=COLORS['gray'])
 
     # Bottom website
@@ -577,7 +577,7 @@ def build_introduction(c):
     y = PAGE_H - MARGIN_TOP
 
     # Section label
-    draw_section_label(c, MARGIN_LEFT, y, "// Introducao")
+    draw_section_label(c, MARGIN_LEFT, y, "// Introdução")
     y -= 8
     draw_accent_line(c, MARGIN_LEFT, y, 60, color=COLORS['cyan'], thickness=2)
 
@@ -589,9 +589,9 @@ def build_introduction(c):
     # Body text
     y -= 40
     body = (
-        "Se voce tem uma PME, provavelmente seu time gasta horas toda semana "
+        "Se você tem uma PME, provavelmente seu time gasta horas toda semana "
         "em tarefas que poderiam ser feitas automaticamente. Este guia mostra "
-        "10 processos concretos - com exemplos reais - que voce pode comecar "
+        "10 processos concretos - com exemplos reais - que você pode começar "
         "a automatizar agora."
     )
     y = draw_wrapped_text(c, MARGIN_LEFT, y, body, CONTENT_W,
@@ -615,24 +615,24 @@ def build_introduction(c):
     # Stat content inside card
     stat_x = card_x + 20
     stat_y = card_y + card_h - 30
-    draw_text(c, stat_x, stat_y, "VOCE SABIA?",
+    draw_text(c, stat_x, stat_y, "VOCÊ SABIA?",
               font=FONT_MONO, size=9, color=COLORS['cyan'])
 
     stat_y -= 22
     draw_wrapped_text(c, stat_x, stat_y,
-                      "PMEs que adotam automacao economizam em media 15-25 horas "
+                      "PMEs que adotam automação economizam em média 15-25 horas "
                       "por semana em tarefas operacionais, segundo pesquisas do setor.",
                       card_w - 40, size=12, color=COLORS['text_light'], line_spacing=1.5)
 
     # Second highlight: what you'll find
     y = card_y - 40
-    draw_text(c, MARGIN_LEFT, y, "O que voce vai encontrar neste guia:",
+    draw_text(c, MARGIN_LEFT, y, "O que você vai encontrar neste guia:",
               font=FONT_BODY_BOLD, size=14, color=COLORS['white'])
 
     items = [
         "10 processos comuns que podem ser automatizados",
         "O problema que cada um resolve",
-        "Ferramentas sugeridas para implementacao",
+        "Ferramentas sugeridas para implementação",
         "Economia estimada de tempo",
         "Cases reais de clientes da Time Saving Tech",
     ]
@@ -709,7 +709,7 @@ def build_process_page(c, process, page_num):
     draw_wrapped_text(c, label_x, text_y, process['problem'],
                       card_w - 30, size=11, color=COLORS['text_body'], line_spacing=1.4)
 
-    # --- Card 2: SOLUCAO ---
+    # --- Card 2: SOLUÇÃO ---
     y = card_y - 15
     card_h = 105
     card_y = y - card_h
@@ -723,7 +723,7 @@ def build_process_page(c, process, page_num):
     c.restoreState()
 
     label_y = card_y + card_h - 22
-    draw_text(c, label_x, label_y, "SOLUCAO",
+    draw_text(c, label_x, label_y, "SOLUÇÃO",
               font=FONT_MONO, size=9, color=COLORS['cyan'])
 
     text_y = label_y - 20
@@ -803,21 +803,21 @@ def build_cta(c):
     y = PAGE_H - MARGIN_TOP
 
     # Section label
-    draw_section_label(c, MARGIN_LEFT, y, "// Proximo passo")
+    draw_section_label(c, MARGIN_LEFT, y, "// Próximo passo")
     y -= 8
     draw_accent_line(c, MARGIN_LEFT, y, 80, color=COLORS['cyan'], thickness=2)
 
     # Title
     y -= 40
-    title_text = "Qual desses processos faz mais sentido para o seu negocio?"
+    title_text = "Qual desses processos faz mais sentido para o seu negócio?"
     y = draw_wrapped_text(c, MARGIN_LEFT, y, title_text, CONTENT_W,
                           font=FONT_BODY_BOLD, size=20, color=COLORS['white'], line_spacing=1.4)
 
     # Body text
     y -= 20
     body = (
-        "Oferecemos um diagnostico gratuito de 30 minutos para identificar "
-        "as melhores oportunidades de automacao na sua empresa."
+        "Oferecemos um diagnóstico gratuito de 30 minutos para identificar "
+        "as melhores oportunidades de automação na sua empresa."
     )
     y = draw_wrapped_text(c, MARGIN_LEFT, y, body, CONTENT_W,
                           size=13, color=COLORS['text_body'], line_spacing=1.5)
@@ -929,7 +929,7 @@ def generate_lead_magnet(output_path):
     c = canvas.Canvas(output_path, pagesize=A4)
     c.setTitle("10 Processos que Toda PME Pode Automatizar Hoje")
     c.setAuthor("Time Saving Tech")
-    c.setSubject("Guia de Automacao para PMEs")
+    c.setSubject("Guia de Automação para PMEs")
 
     # Page 1: Cover
     build_cover(c)

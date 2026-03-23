@@ -129,7 +129,7 @@ function Hero() {
         <div className="inline-flex items-center gap-2 bg-[#0a0a0f]/80 border border-[#00d4ff]/30 rounded-full px-4 py-2 mb-6 animate-fade-in-up opacity-0 backdrop-blur-sm">
           <BadgeCheck className="w-4 h-4 text-[#00d4ff]" />
           <span className="text-sm text-[#8b8b9e]">Parceiro Oficial</span>
-          <img src="/clientes/simetrik-logo.png" alt="Simetrik" className="h-4 w-auto opacity-90" />
+          <img src="/clientes/simetrik-logo.png" alt="Simetrik" className="h-4 w-auto bg-white rounded px-1" />
         </div>
 
         {/* Badge secundário */}

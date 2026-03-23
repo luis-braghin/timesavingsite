@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { X, CheckCircle2 } from 'lucide-react'
+import { X, CheckCircle2, Download } from 'lucide-react'
 
 export default function ExitIntentPopup() {
   const [showPopup, setShowPopup] = useState(false)
@@ -73,11 +73,23 @@ export default function ExitIntentPopup() {
 
         {submitted ? (
           /* Success state */
-          <div className="text-center py-8">
+          <div className="text-center py-6">
             <CheckCircle2 className="w-16 h-16 text-[#00d4ff] mx-auto mb-4" />
-            <p className="font-display font-bold text-xl text-white">
-              Enviado! Verifique seu email.
+            <p className="font-display font-bold text-xl text-white mb-2">
+              Enviado!
             </p>
+            <p className="text-[#8b8b9e] mb-4">
+              O guia chegará no seu email em instantes.
+            </p>
+            <a
+              href="/lead-magnet-automacao-pme.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[#00d4ff] hover:text-white text-sm font-medium transition-colors"
+            >
+              <Download className="w-4 h-4" />
+              Ou clique aqui para baixar diretamente
+            </a>
           </div>
         ) : (
           /* Form state */

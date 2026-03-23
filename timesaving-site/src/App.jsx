@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { 
-  Menu, 
-  X, 
-  Zap, 
-  Brain, 
-  Workflow, 
-  BarChart3, 
-  Bot, 
+import {
+  Menu,
+  X,
+  Zap,
+  Brain,
+  Workflow,
+  BarChart3,
+  Bot,
   Code2,
-  Mail, 
+  Mail,
   Phone,
   ArrowRight,
   ChevronDown,
@@ -17,7 +17,10 @@ import {
   Target,
   Users,
   BadgeCheck,
-  ExternalLink
+  ExternalLink,
+  CheckCircle2,
+  Smartphone,
+  Mic
 } from 'lucide-react'
 
 // Navigation Component
@@ -37,7 +40,7 @@ function Navigation() {
     { href: '#inicio', label: 'Início' },
     { href: '#servicos', label: 'Serviços' },
     { href: '#parceiros', label: 'Parceiros' },
-    { href: '#clientes', label: 'Clientes' },
+    { href: '#cases', label: 'Cases' },
     { href: '#contato', label: 'Contato' },
   ]
 
@@ -544,6 +547,182 @@ function Clients() {
   )
 }
 
+// Case Studies Section
+function CaseStudies() {
+  const [visibleCards, setVisibleCards] = useState([])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleCards((prev) => [...new Set([...prev, entry.target.dataset.index])])
+          }
+        })
+      },
+      { threshold: 0.15 }
+    )
+
+    const cards = document.querySelectorAll('[data-case-card]')
+    cards.forEach((card) => observer.observe(card))
+
+    return () => observer.disconnect()
+  }, [])
+
+  const cases = [
+    {
+      tag: 'Automacao de Processos',
+      tagColor: 'from-[#00d4ff] to-[#0ea5e9]',
+      icon: Workflow,
+      name: 'Ronron Cat Cafe',
+      segment: 'Entretenimento e Lazer',
+      problem: 'O processo de inscricao em eventos era uma maratona de etapas manuais — do Instagram ao WhatsApp, passando por formularios genericos e comprovantes soltos — que perdia clientes no caminho e gerava retrabalho toda semana.',
+      solution: 'Criamos um site com fluxo completo de inscricao: o cliente ve os eventos disponiveis, se inscreve, paga via PIX e envia o comprovante — tudo em um so lugar. As vagas atualizam em tempo real. Como a dona do cafe nao e de tecnologia, entregamos uma solucao onde ela gerencia tudo direto de uma planilha Google — edita um campo e o site atualiza sozinho.',
+      results: [
+        'Fluxo de inscricao reduzido de 5 etapas manuais para uma experiencia unica e guiada',
+        'Zero retrabalho semanal com controle de vagas e comprovantes centralizado e automatico',
+        'Custo de operacao zero em hospedagem e infraestrutura',
+      ],
+    },
+    {
+      tag: 'App Mobile',
+      tagColor: 'from-[#7c3aed] to-[#a855f7]',
+      icon: Smartphone,
+      name: 'Port-Go',
+      segment: 'Gestao Condominial — Residencial Imperatriz',
+      problem: 'A portaria registrava entregas em cadernos e ligava para moradores um a um — processo lento, sujeito a erro e que deixava encomendas esquecidas no balcao.',
+      solution: 'Desenvolvemos um aplicativo de portaria onde o porteiro registra a entrega em segundos e o morador recebe uma notificacao automatica via WhatsApp. O sistema inclui historico completo de entregas, comunicados do condominio e painel administrativo — tudo acessivel pelo celular.',
+      results: [
+        'Moradores notificados instantaneamente sobre entregas, sem depender de ligacoes ou recados',
+        'Historico digital completo substitui controles em papel, eliminando perdas e esquecimentos',
+        'Comunicacao centralizada entre administracao, portaria e moradores em um unico app',
+      ],
+    },
+    {
+      tag: 'IA Aplicada',
+      tagColor: 'from-[#f59e0b] to-[#f97316]',
+      icon: Mic,
+      name: 'FalaFit',
+      segment: 'Saude e Nutricao',
+      problem: 'Apps de contagem de calorias sao cansativos — buscar cada alimento, selecionar porcao, repetir 4 vezes por dia. A maioria das pessoas desiste em poucos dias.',
+      solution: 'Criamos um app onde o usuario simplesmente fala o que comeu e a inteligencia artificial identifica os alimentos e calcula os macronutrientes automaticamente. Para nutricionistas, construimos um sistema completo: convite de pacientes, acompanhamento da alimentacao em tempo real, definicao de metas e envio de planos de dieta.',
+      results: [
+        'Registro de refeicao em segundos por voz, contra minutos de busca manual em apps tradicionais',
+        'Sistema SaaS completo com assinaturas, programa de afiliados e painel administrativo pronto para escalar',
+        'Base de 5.000+ alimentos brasileiros com cache inteligente que melhora a cada uso',
+      ],
+    },
+  ]
+
+  return (
+    <section id="cases" className="relative py-32 bg-[#050508] overflow-hidden">
+      <div className="absolute inset-0 bg-radial opacity-50"></div>
+      <div className="float-element w-[400px] h-[400px] bg-[#00d4ff] -top-32 -left-48 animate-float opacity-15"></div>
+      <div className="float-element w-[300px] h-[300px] bg-[#7c3aed] bottom-20 -right-32 animate-float opacity-15" style={{ animationDelay: '-3s' }}></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <span className="font-mono text-[#00d4ff] text-sm tracking-wider uppercase mb-4 block">
+            // Cases de Sucesso
+          </span>
+          <h2 className="font-display font-bold text-4xl md:text-5xl text-white mb-6">
+            Resultados que{' '}
+            <span className="gradient-text">falam por si</span>
+          </h2>
+          <p className="text-lg text-[#8b8b9e] max-w-2xl mx-auto">
+            Cada projeto comeca com um problema real. Veja como transformamos desafios
+            de negocio em solucoes que funcionam — e os resultados que entregamos.
+          </p>
+        </div>
+
+        {/* Cases grid */}
+        <div className="grid lg:grid-cols-3 gap-8">
+          {cases.map((caseItem, index) => (
+            <div
+              key={caseItem.name}
+              data-case-card
+              data-index={index}
+              className={`group bg-[#12121a] border border-[#1e1e2e] rounded-2xl overflow-hidden transition-all duration-700 ${
+                visibleCards.includes(String(index))
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-12'
+              }`}
+              style={{ transitionDelay: `${index * 150}ms` }}
+            >
+              {/* Glow border top */}
+              <div className={`h-1 bg-gradient-to-r ${caseItem.tagColor}`}></div>
+
+              <div className="p-8">
+                {/* Tag + Icon */}
+                <div className="flex items-center justify-between mb-6">
+                  <span className={`inline-flex items-center gap-1.5 text-xs font-mono font-semibold px-3 py-1.5 rounded-full bg-gradient-to-r ${caseItem.tagColor} text-white`}>
+                    {caseItem.tag}
+                  </span>
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#00d4ff]/10 to-[#7c3aed]/10 flex items-center justify-center border border-[#1e1e2e] group-hover:border-[#00d4ff]/30 transition-colors">
+                    <caseItem.icon className="w-5 h-5 text-[#00d4ff]" />
+                  </div>
+                </div>
+
+                {/* Name + Segment */}
+                <h3 className="font-display font-bold text-2xl text-white mb-1">
+                  {caseItem.name}
+                </h3>
+                <p className="text-[#00d4ff] text-sm font-medium mb-5">
+                  {caseItem.segment}
+                </p>
+
+                {/* Problem */}
+                <div className="mb-5">
+                  <span className="text-xs font-mono text-[#8b8b9e] uppercase tracking-wider">O problema</span>
+                  <p className="text-[#8b8b9e] text-sm mt-2 leading-relaxed">
+                    {caseItem.problem}
+                  </p>
+                </div>
+
+                {/* Solution */}
+                <div className="mb-6">
+                  <span className="text-xs font-mono text-[#8b8b9e] uppercase tracking-wider">O que fizemos</span>
+                  <p className="text-[#c4c4d4] text-sm mt-2 leading-relaxed">
+                    {caseItem.solution}
+                  </p>
+                </div>
+
+                {/* Divider */}
+                <div className="h-px bg-gradient-to-r from-transparent via-[#1e1e2e] to-transparent mb-6"></div>
+
+                {/* Results */}
+                <div>
+                  <span className="text-xs font-mono text-[#00d4ff] uppercase tracking-wider">Resultados</span>
+                  <ul className="mt-3 space-y-3">
+                    {caseItem.results.map((result, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 text-[#00d4ff] mt-0.5 flex-shrink-0" />
+                        <span className="text-[#c4c4d4] text-sm leading-relaxed">{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <p className="text-[#8b8b9e] mb-6">
+            Quer ver o que podemos fazer pelo seu negocio?
+          </p>
+          <a href="#contato" className="btn-primary inline-flex items-center gap-2">
+            Comece seu projeto
+            <ArrowRight className="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // Contact Section
 function Contact() {
   const [formData, setFormData] = useState({
@@ -730,6 +909,7 @@ export default function App() {
       <Services />
       <Partners />
       <Clients />
+      <CaseStudies />
       <Contact />
       <Footer />
     </div>

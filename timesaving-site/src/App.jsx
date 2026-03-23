@@ -485,7 +485,7 @@ function Clients() {
     { name: 'Training Academia', logo: '/clientes/training-logo.png' },
     { name: 'Fornecedora Agnus', logo: '/clientes/agnus-logo.png' },
     { name: 'Cozinha da Cler', logo: '/clientes/marmitas-cler-logo.jpeg' },
-    { name: 'Simetrik', logo: '/clientes/simetrik-logo.png' },
+    { name: 'Simetrik', logo: '/clientes/simetrik-logo.png', darkLogo: true },
     { name: 'Residencial Imperatriz', logo: '/clientes/residencial-imperatriz-logo.png' },
   ]
 
@@ -519,7 +519,7 @@ function Clients() {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="max-h-16 max-w-[200px] object-contain mx-auto mb-4"
+                  className={`max-h-16 max-w-[200px] object-contain mx-auto mb-4${client.darkLogo ? ' bg-white rounded-lg p-2' : ''}`}
                 />
                 <span className="font-display font-semibold text-white text-lg">
                   {client.name}

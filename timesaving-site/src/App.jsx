@@ -15,7 +15,9 @@ import {
   Sparkles,
   Clock,
   Target,
-  Users
+  Users,
+  BadgeCheck,
+  ExternalLink
 } from 'lucide-react'
 
 // Navigation Component
@@ -34,6 +36,7 @@ function Navigation() {
   const navLinks = [
     { href: '#inicio', label: 'Início' },
     { href: '#servicos', label: 'Serviços' },
+    { href: '#parceiros', label: 'Parceiros' },
     { href: '#clientes', label: 'Clientes' },
     { href: '#contato', label: 'Contato' },
   ]
@@ -112,8 +115,15 @@ function Hero() {
       <div className="float-element w-72 h-72 bg-[#7c3aed] bottom-20 -right-36 animate-float" style={{ animationDelay: '-3s' }}></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-[#12121a] border border-[#1e1e2e] rounded-full px-4 py-2 mb-8 animate-fade-in-up opacity-0">
+        {/* Partner badge — prova social imediata */}
+        <div className="inline-flex items-center gap-2 bg-[#0a0a0f]/80 border border-[#00d4ff]/30 rounded-full px-4 py-2 mb-6 animate-fade-in-up opacity-0 backdrop-blur-sm">
+          <BadgeCheck className="w-4 h-4 text-[#00d4ff]" />
+          <span className="text-sm text-[#8b8b9e]">Parceiro Oficial</span>
+          <img src="/clientes/simetrik-logo.png" alt="Simetrik" className="h-4 w-auto opacity-90" />
+        </div>
+
+        {/* Badge secundário */}
+        <div className="inline-flex items-center gap-2 bg-[#12121a] border border-[#1e1e2e] rounded-full px-4 py-2 mb-8 animate-fade-in-up opacity-0 ml-3">
           <span className="text-sm text-[#8b8b9e]">Transformando negócios com tecnologia</span>
         </div>
 
@@ -211,7 +221,7 @@ function About() {
 
           {/* Founders */}
           <div className="grid gap-6">
-            {founders.map((founder, index) => (
+            {founders.map((founder) => (
               <div
                 key={founder.name}
                 className="card-hover bg-[#12121a] border border-[#1e1e2e] rounded-2xl p-6"
@@ -295,7 +305,7 @@ function Services() {
 
         {/* Services grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div
               key={service.title}
               className="card-hover bg-[#12121a] border border-[#1e1e2e] rounded-2xl p-8 group"
@@ -327,42 +337,162 @@ function Services() {
   )
 }
 
-// Clients Section
-function Clients() {
-  const clients = [
+// Partners Section
+function Partners() {
+  const stats = [
+    { value: '1B+', label: 'registros processados por dia' },
+    { value: '40+', label: 'países atendidos' },
+    { value: '$85M', label: 'captados em Series B' },
+  ]
+
+  const benefits = [
     {
-      name: 'BBL Advogados',
-      logo: '/clientes/bbl-logo.jpeg',
+      icon: BadgeCheck,
+      title: 'Implementação Certificada',
+      description: 'Somos parceiros oficiais autorizados a implementar e configurar a plataforma Simetrik para nossos clientes.',
     },
     {
-      name: 'Ronron Cat Café',
-      logo: '/clientes/ronron-logo.png',
+      icon: Zap,
+      title: 'Automação Financeira End-to-End',
+      description: 'Combinamos nossa expertise em automação com a plataforma de reconciliação da Simetrik para entregar controle financeiro completo.',
     },
     {
-      name: 'Training Academia',
-      logo: '/clientes/training-logo.png',
-    },
-    {
-      name: 'Fornecedora Agnus',
-      logo: '/clientes/agnus-logo.png',
-    },
-    {
-      name: 'Cozinha da Cler',
-      logo: '/clientes/marmitas-cler-logo.jpeg',
-    },
-    {
-      name: 'Simetrik',
-      logo: '/clientes/simetrik-logo.png',
-    },
-    {
-      name: 'Residencial Imperatriz',
-      logo: '/clientes/residencial-imperatriz-logo.png',
+      icon: Target,
+      title: 'Clientes dos dois lados',
+      description: 'Empresas que chegam pela Time Saving ganham acesso direto à tecnologia que equipes como Nubank, Itaú e Mercado Livre usam.',
     },
   ]
 
   return (
-    <section id="clientes" className="relative py-32 bg-[#050508]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="parceiros" className="relative py-32 bg-[#050508] overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute inset-0 bg-radial opacity-50"></div>
+      <div className="float-element w-[500px] h-[500px] bg-[#7c3aed] top-1/2 -translate-y-1/2 -right-64 animate-float opacity-20"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <span className="font-mono text-[#00d4ff] text-sm tracking-wider uppercase mb-4 block">
+            // Parceria Estratégica
+          </span>
+          <h2 className="font-display font-bold text-4xl md:text-5xl text-white mb-6">
+            Parceiros{' '}
+            <span className="gradient-text">Simetrik</span>
+          </h2>
+          <p className="text-lg text-[#8b8b9e] max-w-2xl mx-auto">
+            A Time Saving Tech é parceira oficial da Simetrik — plataforma líder global 
+            em reconciliação financeira com IA, usada pelas maiores empresas do mundo.
+          </p>
+        </div>
+
+        {/* Main partner card */}
+        <div className="relative bg-gradient-to-br from-[#12121a] to-[#0d0d18] border border-[#1e1e2e] rounded-3xl p-10 mb-12 overflow-hidden">
+          {/* Glow border top */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00d4ff] to-transparent"></div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Logos + badge */}
+            <div className="flex flex-col items-center lg:items-start gap-8">
+              {/* Logos com conector */}
+              <div className="flex items-center gap-6">
+                <div className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-2xl p-5 flex items-center justify-center">
+                  <img src="/logo.svg" alt="Time Saving Tech" className="h-10 w-auto" />
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="w-8 h-px bg-gradient-to-r from-[#00d4ff] to-[#7c3aed]"></div>
+                  <span className="text-[10px] font-mono text-[#00d4ff] tracking-widest uppercase">Official Partner</span>
+                  <div className="w-8 h-px bg-gradient-to-r from-[#7c3aed] to-[#00d4ff]"></div>
+                </div>
+                <div className="bg-white rounded-2xl p-5 flex items-center justify-center">
+                  <img src="/clientes/simetrik-logo.png" alt="Simetrik" className="h-10 w-auto" />
+                </div>
+              </div>
+
+              {/* Badge oficial */}
+              <div className="inline-flex items-center gap-2 bg-[#00d4ff]/10 border border-[#00d4ff]/30 rounded-full px-5 py-2.5">
+                <BadgeCheck className="w-5 h-5 text-[#00d4ff]" />
+                <span className="text-sm font-semibold text-[#00d4ff]">Parceiro Oficial Certificado</span>
+              </div>
+
+              {/* Stats da Simetrik */}
+              <div className="grid grid-cols-3 gap-4 w-full">
+                {stats.map((stat) => (
+                  <div key={stat.label} className="text-center bg-[#0a0a0f] border border-[#1e1e2e] rounded-xl p-4">
+                    <div className="font-display font-bold text-2xl text-[#00d4ff] mb-1">{stat.value}</div>
+                    <div className="text-[10px] text-[#8b8b9e] leading-tight">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: Descrição */}
+            <div>
+              <h3 className="font-display font-bold text-2xl text-white mb-4">
+                O que essa parceria significa para você
+              </h3>
+              <p className="text-[#8b8b9e] mb-6 leading-relaxed">
+                A <span className="text-white font-medium">Simetrik</span> é a plataforma de reconciliação financeira com IA 
+                que processa mais de 1 bilhão de transações por dia para empresas como{' '}
+                <span className="text-white">Nubank, Itaú, Mercado Libre e Santander</span>. 
+                Captou $85M em Series B pela Goldman Sachs e foi eleita pelo Financial Times 
+                uma das empresas de crescimento mais rápido nas Américas por dois anos consecutivos.
+              </p>
+              <p className="text-[#8b8b9e] mb-8 leading-relaxed">
+                Como parceiros oficiais, a Time Saving Tech implementa, configura e integra 
+                a plataforma Simetrik no seu negócio — com toda nossa expertise em automação 
+                para garantir o máximo retorno da tecnologia.
+              </p>
+              <a
+                href="#contato"
+                className="btn-primary inline-flex items-center gap-2"
+              >
+                Saiba como aplicar no seu negócio
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Benefits grid */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {benefits.map((benefit) => (
+            <div
+              key={benefit.title}
+              className="card-hover bg-[#12121a] border border-[#1e1e2e] rounded-2xl p-7 group"
+            >
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#00d4ff]/10 to-[#7c3aed]/10 flex items-center justify-center mb-5 border border-[#1e1e2e] group-hover:border-[#00d4ff]/30 transition-colors">
+                <benefit.icon className="w-6 h-6 text-[#00d4ff]" />
+              </div>
+              <h4 className="font-display font-semibold text-lg text-white mb-3">
+                {benefit.title}
+              </h4>
+              <p className="text-[#8b8b9e] text-sm leading-relaxed">
+                {benefit.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// Clients Section
+function Clients() {
+  const clients = [
+    { name: 'BBL Advogados', logo: '/clientes/bbl-logo.jpeg' },
+    { name: 'Ronron Cat Café', logo: '/clientes/ronron-logo.png' },
+    { name: 'Training Academia', logo: '/clientes/training-logo.png' },
+    { name: 'Fornecedora Agnus', logo: '/clientes/agnus-logo.png' },
+    { name: 'Cozinha da Cler', logo: '/clientes/marmitas-cler-logo.jpeg' },
+    { name: 'Simetrik', logo: '/clientes/simetrik-logo.png' },
+    { name: 'Residencial Imperatriz', logo: '/clientes/residencial-imperatriz-logo.png' },
+  ]
+
+  return (
+    <section id="clientes" className="relative py-32 bg-[#0a0a0f]">
+      <div className="absolute inset-0 bg-grid opacity-30"></div>
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
           <span className="font-mono text-[#00d4ff] text-sm tracking-wider uppercase mb-4 block">
@@ -385,27 +515,16 @@ function Clients() {
               key={client.name}
               className="card-hover bg-[#12121a] border border-[#1e1e2e] rounded-2xl p-8 min-w-[280px] flex items-center justify-center"
             >
-              {client.logo ? (
-                <div className="text-center">
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="max-h-16 max-w-[200px] object-contain mx-auto mb-4"
-                  />
-                  <span className="font-display font-semibold text-white text-lg">
-                    {client.name}
-                  </span>
-                </div>
-              ) : (
-                <div className="text-center">
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#00d4ff]/10 to-[#7c3aed]/10 flex items-center justify-center mx-auto mb-4 border border-[#1e1e2e]">
-                    <Target className="w-8 h-8 text-[#00d4ff]" />
-                  </div>
-                  <span className="font-display font-semibold text-white text-lg">
-                    {client.name}
-                  </span>
-                </div>
-              )}
+              <div className="text-center">
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="max-h-16 max-w-[200px] object-contain mx-auto mb-4"
+                />
+                <span className="font-display font-semibold text-white text-lg">
+                  {client.name}
+                </span>
+              </div>
             </div>
           ))}
         </div>
@@ -448,12 +567,9 @@ function Contact() {
     try {
       await fetch('https://n8n.timesavingtech.com.br/webhook/ts', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       })
-      
       setSubmitted(true)
       setFormData({ name: '', email: '', phone: '', company: '', message: '' })
       setTimeout(() => setSubmitted(false), 5000)
@@ -467,11 +583,10 @@ function Contact() {
   const whatsappNumber = '5519981250530'
   const whatsappMessage = encodeURIComponent('Olá! Vim pelo site da Time Saving Tech e gostaria de saber mais sobre os serviços de vocês.')
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
-
   const emailAddress = 'luis@timesavingtech.com.br'
 
   return (
-    <section id="contato" className="relative py-32 bg-[#0a0a0f] overflow-hidden">
+    <section id="contato" className="relative py-32 bg-[#050508] overflow-hidden">
       <div className="absolute inset-0 bg-radial"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -495,96 +610,34 @@ function Contact() {
           <div className="bg-[#12121a] border border-[#1e1e2e] rounded-2xl p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
-                  Nome
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="Seu nome completo"
-                />
+                <label htmlFor="name" className="block text-sm font-medium text-white mb-2">Nome</label>
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="Seu nome completo" />
               </div>
-              
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                  E-mail
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="seu@email.com"
-                />
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">E-mail</label>
+                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required placeholder="seu@email.com" />
               </div>
-
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
-                  Telefone
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  placeholder="(11) 99999-9999"
-                />
+                <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">Telefone</label>
+                <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required placeholder="(11) 99999-9999" />
               </div>
-              
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
-                  Empresa
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  placeholder="Nome da sua empresa"
-                />
+                <label htmlFor="company" className="block text-sm font-medium text-white mb-2">Empresa</label>
+                <input type="text" id="company" name="company" value={formData.company} onChange={handleChange} placeholder="Nome da sua empresa" />
               </div>
-              
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
-                  Mensagem
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={4}
-                  placeholder="Conte-nos sobre seu projeto ou desafio..."
-                />
+                <label htmlFor="message" className="block text-sm font-medium text-white mb-2">Mensagem</label>
+                <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={4} placeholder="Conte-nos sobre seu projeto ou desafio..." />
               </div>
-
               <button
                 type="submit"
                 disabled={isSubmitting}
                 className="btn-primary w-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? (
-                  'Enviando...'
-                ) : submitted ? (
-                  <>
-                    <Sparkles className="w-5 h-5" />
-                    Mensagem enviada!
-                  </>
+                {isSubmitting ? 'Enviando...' : submitted ? (
+                  <><Sparkles className="w-5 h-5" />Mensagem enviada!</>
                 ) : (
-                  <>
-                    Enviar mensagem
-                    <ArrowRight className="w-5 h-5" />
-                  </>
+                  <>Enviar mensagem<ArrowRight className="w-5 h-5" /></>
                 )}
               </button>
             </form>
@@ -592,47 +645,32 @@ function Contact() {
 
           {/* Contact options */}
           <div className="space-y-6">
-            {/* WhatsApp */}
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card-hover bg-[#12121a] border border-[#1e1e2e] rounded-2xl p-6 flex items-center gap-6 group"
-            >
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer"
+              className="card-hover bg-[#12121a] border border-[#1e1e2e] rounded-2xl p-6 flex items-center gap-6 group">
               <div className="w-14 h-14 rounded-xl bg-[#25D366]/10 flex items-center justify-center border border-[#25D366]/20 group-hover:border-[#25D366]/40 transition-colors">
                 <Phone className="w-7 h-7 text-[#25D366]" />
               </div>
               <div className="flex-1">
-                <h3 className="font-display font-semibold text-lg text-white mb-1">
-                  WhatsApp
-                </h3>
+                <h3 className="font-display font-semibold text-lg text-white mb-1">WhatsApp</h3>
                 <p className="text-[#8b8b9e]">Resposta rápida para dúvidas urgentes</p>
               </div>
               <ArrowRight className="w-5 h-5 text-[#8b8b9e] group-hover:text-white group-hover:translate-x-1 transition-all" />
             </a>
 
-            {/* Email */}
-            <a
-              href={`mailto:${emailAddress}`}
-              className="card-hover bg-[#12121a] border border-[#1e1e2e] rounded-2xl p-6 flex items-center gap-6 group"
-            >
+            <a href={`mailto:${emailAddress}`}
+              className="card-hover bg-[#12121a] border border-[#1e1e2e] rounded-2xl p-6 flex items-center gap-6 group">
               <div className="w-14 h-14 rounded-xl bg-[#00d4ff]/10 flex items-center justify-center border border-[#00d4ff]/20 group-hover:border-[#00d4ff]/40 transition-colors">
                 <Mail className="w-7 h-7 text-[#00d4ff]" />
               </div>
               <div className="flex-1">
-                <h3 className="font-display font-semibold text-lg text-white mb-1">
-                  E-mail
-                </h3>
+                <h3 className="font-display font-semibold text-lg text-white mb-1">E-mail</h3>
                 <p className="text-[#8b8b9e]">{emailAddress}</p>
               </div>
               <ArrowRight className="w-5 h-5 text-[#8b8b9e] group-hover:text-white group-hover:translate-x-1 transition-all" />
             </a>
 
-            {/* Info box */}
             <div className="bg-gradient-to-br from-[#00d4ff]/5 to-[#7c3aed]/5 border border-[#1e1e2e] rounded-2xl p-6">
-              <h3 className="font-display font-semibold text-white mb-3">
-                Por que escolher a Time Saving?
-              </h3>
+              <h3 className="font-display font-semibold text-white mb-3">Por que escolher a Time Saving?</h3>
               <ul className="space-y-3 text-[#8b8b9e]">
                 <li className="flex items-start gap-3">
                   <Zap className="w-5 h-5 text-[#00d4ff] mt-0.5 flex-shrink-0" />
@@ -663,30 +701,18 @@ function Footer() {
     <footer className="bg-[#050508] border-t border-[#1e1e2e] py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo */}
           <div className="flex items-center gap-3">
             <img src="/logo.svg" alt="Time Saving Tech" className="h-8 w-auto" />
-            <span className="font-display font-bold text-lg text-white">
-              Time Saving Tech
-            </span>
+            <span className="font-display font-bold text-lg text-white">Time Saving Tech</span>
           </div>
-
-          {/* Copyright */}
           <p className="text-[#8b8b9e] text-sm text-center">
             © {currentYear} Time Saving Tech. Todos os direitos reservados.
           </p>
-
-          {/* Links */}
           <div className="flex items-center gap-6">
-            <a href="#inicio" className="text-[#8b8b9e] hover:text-white text-sm transition-colors">
-              Início
-            </a>
-            <a href="#servicos" className="text-[#8b8b9e] hover:text-white text-sm transition-colors">
-              Serviços
-            </a>
-            <a href="#contato" className="text-[#8b8b9e] hover:text-white text-sm transition-colors">
-              Contato
-            </a>
+            <a href="#inicio" className="text-[#8b8b9e] hover:text-white text-sm transition-colors">Início</a>
+            <a href="#servicos" className="text-[#8b8b9e] hover:text-white text-sm transition-colors">Serviços</a>
+            <a href="#parceiros" className="text-[#8b8b9e] hover:text-white text-sm transition-colors">Parceiros</a>
+            <a href="#contato" className="text-[#8b8b9e] hover:text-white text-sm transition-colors">Contato</a>
           </div>
         </div>
       </div>
@@ -702,6 +728,7 @@ export default function App() {
       <Hero />
       <About />
       <Services />
+      <Partners />
       <Clients />
       <Contact />
       <Footer />

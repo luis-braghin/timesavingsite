@@ -578,17 +578,17 @@ function CaseStudies() {
 
   const cases = [
     {
-      tag: 'Automacao de Processos',
+      tag: 'Automação de Processos',
       tagColor: 'from-[#00d4ff] to-[#0ea5e9]',
       icon: Workflow,
-      name: 'Ronron Cat Cafe',
+      name: 'Ronron Cat Café',
       segment: 'Entretenimento e Lazer',
-      problem: 'O processo de inscricao em eventos era uma maratona de etapas manuais — do Instagram ao WhatsApp, passando por formularios genericos e comprovantes soltos — que perdia clientes no caminho e gerava retrabalho toda semana.',
-      solution: 'Criamos um site com fluxo completo de inscricao: o cliente ve os eventos disponiveis, se inscreve, paga via PIX e envia o comprovante — tudo em um so lugar. As vagas atualizam em tempo real. Como a dona do cafe nao e de tecnologia, entregamos uma solucao onde ela gerencia tudo direto de uma planilha Google — edita um campo e o site atualiza sozinho.',
+      problem: 'O processo de inscrição em eventos era uma maratona de etapas manuais — do Instagram ao WhatsApp, passando por formulários genéricos e comprovantes soltos — que perdia clientes no caminho e gerava retrabalho toda semana.',
+      solution: 'Criamos um site com fluxo completo de inscrição: o cliente vê os eventos disponíveis, se inscreve, paga via PIX e envia o comprovante — tudo em um só lugar. As vagas atualizam em tempo real. Como a dona do café não é de tecnologia, entregamos uma solução onde ela gerencia tudo direto de uma planilha Google — edita um campo e o site atualiza sozinho.',
       results: [
-        'Fluxo de inscricao reduzido de 5 etapas manuais para uma experiencia unica e guiada',
-        'Zero retrabalho semanal com controle de vagas e comprovantes centralizado e automatico',
-        'Custo de operacao zero em hospedagem e infraestrutura',
+        'Fluxo de inscrição reduzido de 5 etapas manuais para uma experiência única e guiada',
+        'Zero retrabalho semanal com controle de vagas e comprovantes centralizado e automático',
+        'Custo de operação zero em hospedagem e infraestrutura',
       ],
     },
     {
@@ -596,13 +596,13 @@ function CaseStudies() {
       tagColor: 'from-[#7c3aed] to-[#a855f7]',
       icon: Smartphone,
       name: 'Port-Go',
-      segment: 'Gestao Condominial — Residencial Imperatriz',
-      problem: 'A portaria registrava entregas em cadernos e ligava para moradores um a um — processo lento, sujeito a erro e que deixava encomendas esquecidas no balcao.',
-      solution: 'Desenvolvemos um aplicativo de portaria onde o porteiro registra a entrega em segundos e o morador recebe uma notificacao automatica via WhatsApp. O sistema inclui historico completo de entregas, comunicados do condominio e painel administrativo — tudo acessivel pelo celular.',
+      segment: 'Gestão Condominial — Residencial Imperatriz',
+      problem: 'A portaria registrava entregas em cadernos e ligava para moradores um a um — processo lento, sujeito a erro e que deixava encomendas esquecidas no balcão.',
+      solution: 'Desenvolvemos um aplicativo de portaria onde o porteiro registra a entrega em segundos e o morador recebe uma notificação automática via WhatsApp. O sistema inclui histórico completo de entregas, comunicados do condomínio e painel administrativo — tudo acessível pelo celular.',
       results: [
-        'Moradores notificados instantaneamente sobre entregas, sem depender de ligacoes ou recados',
-        'Historico digital completo substitui controles em papel, eliminando perdas e esquecimentos',
-        'Comunicacao centralizada entre administracao, portaria e moradores em um unico app',
+        'Moradores notificados instantaneamente sobre entregas, sem depender de ligações ou recados',
+        'Histórico digital completo substitui controles em papel, eliminando perdas e esquecimentos',
+        'Comunicação centralizada entre administração, portaria e moradores em um único app',
       ],
     },
     {
@@ -610,11 +610,11 @@ function CaseStudies() {
       tagColor: 'from-[#f59e0b] to-[#f97316]',
       icon: Mic,
       name: 'FalaFit',
-      segment: 'Saude e Nutricao',
-      problem: 'Apps de contagem de calorias sao cansativos — buscar cada alimento, selecionar porcao, repetir 4 vezes por dia. A maioria das pessoas desiste em poucos dias.',
-      solution: 'Criamos um app onde o usuario simplesmente fala o que comeu e a inteligencia artificial identifica os alimentos e calcula os macronutrientes automaticamente. Para nutricionistas, construimos um sistema completo: convite de pacientes, acompanhamento da alimentacao em tempo real, definicao de metas e envio de planos de dieta.',
+      segment: 'Saúde e Nutrição',
+      problem: 'Apps de contagem de calorias são cansativos — buscar cada alimento, selecionar porção, repetir 4 vezes por dia. A maioria das pessoas desiste em poucos dias.',
+      solution: 'Criamos um app onde o usuário simplesmente fala o que comeu e a inteligência artificial identifica os alimentos e calcula os macronutrientes automaticamente. Para nutricionistas, construímos um sistema completo: convite de pacientes, acompanhamento da alimentação em tempo real, definição de metas e envio de planos de dieta.',
       results: [
-        'Registro de refeicao em segundos por voz, contra minutos de busca manual em apps tradicionais',
+        'Registro de refeição em segundos por voz, contra minutos de busca manual em apps tradicionais',
         'Sistema SaaS completo com assinaturas, programa de afiliados e painel administrativo pronto para escalar',
         'Base de 5.000+ alimentos brasileiros com cache inteligente que melhora a cada uso',
       ],
@@ -638,8 +638,8 @@ function CaseStudies() {
             <span className="gradient-text">falam por si</span>
           </h2>
           <p className="text-lg text-[#8b8b9e] max-w-2xl mx-auto">
-            Cada projeto comeca com um problema real. Veja como transformamos desafios
-            de negocio em solucoes que funcionam — e os resultados que entregamos.
+            Cada projeto começa com um problema real. Veja como transformamos desafios
+            de negócio em soluções que funcionam — e os resultados que entregamos.
           </p>
         </div>
 
@@ -718,7 +718,7 @@ function CaseStudies() {
         {/* CTA */}
         <div className="text-center mt-16">
           <p className="text-[#8b8b9e] mb-6">
-            Quer ver o que podemos fazer pelo seu negocio?
+            Quer ver o que podemos fazer pelo seu negócio?
           </p>
           <a href="#contato" className="btn-primary inline-flex items-center gap-2">
             Comece seu projeto

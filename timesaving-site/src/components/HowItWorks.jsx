@@ -5,26 +5,26 @@ const steps = [
   {
     number: 1,
     icon: Search,
-    title: 'Diagnostico',
-    description: 'Entendemos o problema real antes de propor qualquer solucao',
+    title: 'Diagnóstico',
+    description: 'Entendemos o problema real antes de propor qualquer solução',
   },
   {
     number: 2,
     icon: FileText,
     title: 'Proposta',
-    description: 'Solucao clara, prazo definido e preco fechado em 48h',
+    description: 'Solução clara, prazo definido e preço fechado em 48h',
   },
   {
     number: 3,
     icon: Rocket,
-    title: 'Implementacao',
-    description: 'Entregamos em semanas, nao meses. Voce acompanha tudo',
+    title: 'Implementação',
+    description: 'Entregamos em semanas, não meses. Você acompanha tudo',
   },
   {
     number: 4,
     icon: HeadphonesIcon,
     title: 'Suporte',
-    description: 'Nao sumimos apos a entrega. Evoluimos junto com voce',
+    description: 'Não sumimos após a entrega. Evoluímos junto com você',
   },
 ]
 
@@ -61,8 +61,8 @@ export default function HowItWorks() {
             // Como Funciona
           </span>
           <h2 className="font-display font-bold text-4xl md:text-5xl text-white mb-6">
-            Do problema a{' '}
-            <span className="gradient-text">solucao</span>
+            Do problema à{' '}
+            <span className="gradient-text">solução</span>
           </h2>
           <p className="text-lg text-[#8b8b9e] max-w-2xl mx-auto">
             Um processo claro e transparente para transformar seus desafios em resultados concretos.

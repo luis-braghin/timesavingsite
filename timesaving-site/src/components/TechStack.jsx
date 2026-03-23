@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react'
 
 const technologies = [
-  { name: 'n8n', abbreviation: 'n8', category: 'Automacao' },
+  { name: 'n8n', abbreviation: 'n8', category: 'Automação' },
   { name: 'Claude AI', abbreviation: 'AI', category: 'IA' },
   { name: 'Supabase', abbreviation: 'Sb', category: 'Backend' },
   { name: 'React', abbreviation: 'Re', category: 'Frontend' },
   { name: 'TypeScript', abbreviation: 'TS', category: 'Frontend' },
-  { name: 'Power Automate', abbreviation: 'PA', category: 'Automacao' },
+  { name: 'Power Automate', abbreviation: 'PA', category: 'Automação' },
   { name: 'Python', abbreviation: 'Py', category: 'Backend' },
   { name: 'PostgreSQL', abbreviation: 'Pg', category: 'Banco de Dados' },
   { name: 'Vercel', abbreviation: 'Vc', category: 'Deploy' },
   { name: 'Stripe', abbreviation: 'St', category: 'Pagamentos' },
-  { name: 'WhatsApp API', abbreviation: 'WA', category: 'Integracao' },
-  { name: 'Google Sheets API', abbreviation: 'GS', category: 'Integracao' },
+  { name: 'WhatsApp API', abbreviation: 'WA', category: 'Integração' },
+  { name: 'Google Sheets API', abbreviation: 'GS', category: 'Integração' },
 ]
 
 export default function TechStack() {
